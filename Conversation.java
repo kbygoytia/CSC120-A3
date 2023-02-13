@@ -23,13 +23,29 @@ class Conversation {
     for (int i = 0; i < rounds; i+=1){
       Scanner userPhrase = new Scanner(System.in);
       String userInput1 = userPhrase.nextLine();
-      if 
-      else:
-        Random random = new Random();
-        int index = random.nextInt(unchanged_terms.length);
-        convo_transcript.add(userInput1);
-        convo_transcript.add(unchanged_terms[index]);
-        System.out.println(unchanged_terms[index]);
+      String[] mirror_words = {"I", "am", "you", "are", "my", "You", "My", "Are"};
+      String[] split_words = userInput1.split(" ");
+      System.out.println(Arrays.toString(split_words));
+  
+      for (String word : split_words) {
+        int index = Arrays.asList(split_words).indexOf(word);
+        if (word == mirror_words[0]) {
+        
+        }
+        
+      
+     
+      // split userPhrase
+      // for i in userPhrase.length()
+      // if i == "I"
+      // userPhrase[i]
+        else {
+          Random random = new Random();
+          int index = random.nextInt(unchanged_terms.length);
+          convo_transcript.add(userInput1);
+          convo_transcript.add(unchanged_terms[index]);
+          System.out.println(unchanged_terms[index]);
+        }
     }
       convo_transcript.add("See ya!");
       System.out.println("See ya! \n");
