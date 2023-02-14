@@ -1,18 +1,16 @@
 import java.util.*;
 
-// import java.util.Scanner;
-// import java.util.ArrayList;
-// import java.util.List;
-// import java.util.Random;
-
 class Conversation {
+  // static final List<String> unchanged_terms = new ArrayList<>(Arrays.asList("okay", "interesting","Hm....","crazy", "cool")
+  // );
+ 
 
 // You will start the conversation here.
   public static void main(String[] arguments) {
+    // add "static" in front of String[] but for some reason it does not like the variable name of the list
     String[] unchanged_terms = {"okay", "interesting", "Hm....", "crazy", "cool"};
-
+    
     List<String> convo_transcript = new ArrayList<>();
-    // String[] convo_trancript = new ArrayList();
     int rounds;
     Scanner userInput = new Scanner(System.in);
     System.out.print("How many rounds? ");
@@ -23,10 +21,9 @@ class Conversation {
     for (int i = 0; i < rounds; i+=1){
       Scanner userPhrase = new Scanner(System.in);
       String userInput1 = userPhrase.nextLine();
-      // convo_transcript.add(userInput1);
       String[] mirror_words = {"I", "me", "am", "you", "my", "your", "are", "You"};
       String[] split_words = userInput1.split(" ");
-      // System.out.println(Arrays.toString(split_words));
+      // System.out.println(Arrays.toString(split_words)); shows the words in a split up string list.
   
       for (String word : split_words) {
         int index = Arrays.asList(split_words).indexOf(word);
@@ -82,9 +79,7 @@ class Conversation {
     for (int in=0; in < convo_transcript.size(); in++ ) {
       System.out.println(convo_transcript.get(in));
     }
-       //We need to figure out how to make it print not as a list 
-      // final_transcript = Arrays.toString(convo_transcript).replace("[","").replace(",","").replace("]","");
-      // System.out.print(final_transcript); //We need to figure out how to make it print not as a list 
+      
     
       
   }
