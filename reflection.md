@@ -1,10 +1,12 @@
 Use this file to record your reflection on this assignment.
 
 - Which classmates did you consult with while working on this assignment?
-Julie A. and Taylor K. 
+Julie A., Taylor K., and Kayleigh C. 
 
 - Which session(s) of TA / office hours did you attend?
 Sunday 02/12 1-3pm
+Sunday 02/12 7-9pm
+Monday 02/13 7-9pm
 
 - What are your initial impressions of Java? 
 It is very scay and confusing but I understood it by the end. 
