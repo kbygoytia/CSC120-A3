@@ -23,40 +23,69 @@ class Conversation {
     for (int i = 0; i < rounds; i+=1){
       Scanner userPhrase = new Scanner(System.in);
       String userInput1 = userPhrase.nextLine();
-      String[] mirror_words = {"I", "am", "you", "are", "my", "You", "My", "Are"};
+      // convo_transcript.add(userInput1);
+      String[] mirror_words = {"I", "me", "am", "you", "my", "your", "are", "You"};
       String[] split_words = userInput1.split(" ");
-      System.out.println(Arrays.toString(split_words));
+      // System.out.println(Arrays.toString(split_words));
   
       for (String word : split_words) {
         int index = Arrays.asList(split_words).indexOf(word);
-        if (word == mirror_words[0]) {
-        
+        if (word.equals(mirror_words[0])) {
+          split_words[index] = "you";
+
         }
         
+        if (word.equals(mirror_words[1])){
+          split_words[index] = "you";
+        }
+        if (word.equals(mirror_words[2])){
+          split_words[index] = "are";
+        }
+        if (word.equals(mirror_words[3])){
+          split_words[index] = "I";
+        }
+        if (word.equals(mirror_words[4])){
+          split_words[index] = "your";
+        }
+        if (word.equals(mirror_words[5])){
+          split_words[index] = "my";
+        }
+        if (word.equals(mirror_words[6])){
+          split_words[index] = "am";
+        }
+        if (word.equals(mirror_words[7])){
+          split_words[index] = "I";
+        }
       
-     
-      // split userPhrase
-      // for i in userPhrase.length()
-      // if i == "I"
-      // userPhrase[i]
-        else {
-          Random random = new Random();
-          int index = random.nextInt(unchanged_terms.length);
-          convo_transcript.add(userInput1);
-          convo_transcript.add(unchanged_terms[index]);
-          System.out.println(unchanged_terms[index]);
-        }
-    }
-      convo_transcript.add("See ya!");
-      System.out.println("See ya! \n");
-      System.out.println("TRANSCRIPT:");
-    // transcript_final = convo_transcript
-      for (int i=0; i < convo_transcript.size(); i++ ) {
-        System.out.println(convo_transcript.get(i));
       }
+        String new_sent = String.join(" ", split_words);
+        // convo_transcript.add(new_sent);
+      if (!userInput1.equals(new_sent)){
+        convo_transcript.add(userInput1);
+        convo_transcript.add(new_sent);
+        System.out.println(new_sent);
+      }
+
+      if (userInput1.equals(new_sent)){
+        Random random = new Random();
+        int index1 = random.nextInt(unchanged_terms.length);
+        convo_transcript.add(userInput1);
+        convo_transcript.add(unchanged_terms[index1]);
+        System.out.println(unchanged_terms[index1]);
+      }
+      
+    }
+    convo_transcript.add("See ya!");
+    System.out.println("See ya! \n");
+    System.out.println("TRANSCRIPT:");
+    // transcript_final = convo_transcript
+    for (int in=0; in < convo_transcript.size(); in++ ) {
+      System.out.println(convo_transcript.get(in));
+    }
        //We need to figure out how to make it print not as a list 
       // final_transcript = Arrays.toString(convo_transcript).replace("[","").replace(",","").replace("]","");
       // System.out.print(final_transcript); //We need to figure out how to make it print not as a list 
     
+      
   }
 }
