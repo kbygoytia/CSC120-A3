@@ -1,13 +1,14 @@
 import java.util.*;
 
+
+
 class Conversation {
-  // static final List<String> unchanged_terms = new ArrayList<>(Arrays.asList("okay", "interesting","Hm....","crazy", "cool")
-  // );
+
  
 
 // You will start the conversation here.
   public static void main(String[] arguments) {
-    // add "static" in front of String[] but for some reason it does not like the variable name of the list
+    // need to add "static" in front of String[] but for some reason it does not like the variable name of the list
     String[] unchanged_terms = {"okay", "interesting", "Hm....", "crazy", "cool"};
     
     List<String> convo_transcript = new ArrayList<>();
